@@ -1,0 +1,13 @@
+{
+  "name": "drupal/acquia-nimbus",
+  "type": "drupal-theme",
+  "description": "Acquia maintained starter theme.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://github.com/acquia-pso/nimbus",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://github.com/acquia-pso/nimbus/issues",
+    "source": "https://github.com/acquia-pso/nimbus"
+  }
+}
