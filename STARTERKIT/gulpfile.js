@@ -110,7 +110,7 @@ var options = {
 
   // ----- JS ----- //
   js: {
-    files: paths.scripts + '**.*.js',
+    files: paths.scripts + '*.js',
     destination: paths.scripts
 
   },
