@@ -19,7 +19,7 @@ cache:
   - "$HOME/.drush/cache"
   - "$HOME/.npm"
   - "$HOME/.nvm"
-  - "$NIMBUS_DIR/node_modules"
+  - "$NIMBUS_HALO_DIR/node_modules"
 
 mysql:
   database: drupal
