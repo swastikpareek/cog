@@ -13,9 +13,11 @@ Nimbus includes some barebones integration with:
 
 * In your `themes` directory, create `contrib` and `custom` directories
 * Download Nimbus into `themes/contrib`
+* Enable Nimbus: `drush en nimbus`
 * Set Nimbus as your default theme: `drush config-set system.theme default nimbus`
 * To create a subtheme using the default options use `drush nimbus "MyTheme"`
 * `MyTheme` will be available in `themes/custom`
+* Enable `MyTheme`: `drush en mytheme`
 * Set `MyTheme` as your default theme: `drush config-set system.theme default mytheme`
 
 In your command line type `drush help nimbus` to get a list of all available options for creating your new theme.
