@@ -64,8 +64,6 @@ The core files are fairly minimal when setting up a new theme. These files are c
 
 Setup of the Sass files so that they are properly broken out in partials and according to the [SMACSS](https://smacss.com/) methodologies.
 
-**Nimbus Subtheme Sass Folder**
-
 ```
 sass/
   |-- base/

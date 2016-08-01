@@ -7,12 +7,10 @@
 // Style guide: components.header
 
 .region-header {
-  width: 100%;
-  display: block;
-  float: left;
+  @include region-spacer($alto);
 }
 
-.region-header nav.menu--main {
+.region-header .block-system-menublock {
   background: $jelly-bean;
   ul.menu {
     padding: 0;

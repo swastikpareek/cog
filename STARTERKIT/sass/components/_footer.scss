@@ -1,0 +1,6 @@
+.region-footer {
+  @include region-spacer($alto, top);
+  .block-menu ul.menu {
+    @extend .no-ul-list;
+  }
+}
