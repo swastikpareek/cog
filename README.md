@@ -2,11 +2,12 @@
 
 Nimbus is a developer-focused base theme and starterkit intended as a minimalist starting point for custom theming. Nimbus provides the least amount of code to get started, but still packed with utilities and documentation to start quickly.
 
-Nimbus includes baseline integrations with: 
+### Features
 
 * Core *.yml and theme dependencies
-* SMACSS css architecture
-* Modular gulpfile for front end builds
+* Responsive containers built on Susy grid system
+* Initial SMACSS file architecture
+* Modular gulp tasks for compiling and linting
 * Living style guide construction via KSS-node
 
 ## Set up your Theme with Nimbus
@@ -88,17 +89,15 @@ sass/
 * **style-guide-only/** contains homepage.md which provides the content for the Overview section of the styleguide, and kss-only.scss which generates a css file for styling needed by a component for display in the style guide, but not loaded into the actual theme  
 
 
-
 ### JavaScript Files
 
-An example JS file is provided, it is likely that multiple JS files will be greated and loaded in appropriate situations via library files.
+An example JS file `theme.js` is added by default in the `js/` folder. This file contains sample code wrapped in the `Drupal.behaviors` code standard. This JS file is added to the theme with the following portion of the code from `[theme-name].libraries.yml`
 
 ```
-js/
-  |-- example.js
+lib:
+  js:
+    js/theme.js: {}
 ```
-
-**example.js** :: this files is intended to illustrate the Drupal.behaviors() placeholder for future development
 
 
 ## Documentation & Code Examples
