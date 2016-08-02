@@ -5,21 +5,19 @@
 // Markup: tabs.hbs
 //
 // Style guide: components.tabs
-.tabs {
+.block-tabs {
   margin: 1.5em 0;
-}
-
-.tabs ul {
-  width: 100%;
-  display: block;
-  border-bottom: 1px solid $gallery;
-
-  li {
-    display: inline-block;
-
-    a {
-      padding: 0.4em 0.88em;
-      text-decoration: none;
+  ul {
+    display: block;
+    padding-left: 0;
+    border-bottom: 1px solid $lt-gr;
+    li {
+      display: inline-block;
+      a {
+        margin: 0;
+        padding: 0.4em;
+        text-decoration: none;
+      }
     }
   }
 }

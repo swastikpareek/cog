@@ -6,17 +6,11 @@ body {
   padding: 0;
   margin: 0;
 }
-
 body {
   font-family: $body_font;
-  line-height: 145%;
+  font-size: 1em;
+  line-height: 140%;
 }
-
-// section containers
-body .mq--t {
-  @include opac-color(255, 255, 255, .9);
-}
-
 // Base Headings
 //
 // Markup: headlines.hbs
@@ -32,32 +26,26 @@ h4 {
   padding: 0 0 .3em;
   margin: 0;
 }
-
 h1 {
   font-size: 280%;
   line-height: 165%;
 }
-
 h2 {
   font-size: 230%;
   line-height: 145%;
 }
-
 h3 {
   font-size: 210%;
   line-height: 145%;
 }
-
 h4 {
   font-size: 190%;
   line-height: 145%;
 }
-
 body .menu-item {
   padding-top: 0;
   margin: 0;
 }
-
 // Base Text
 //
 // Markup: text.hbs
@@ -73,11 +61,9 @@ a:visited {
     text-decoration: underline;
   }
 }
-
 body p {
   margin: 3px 0 10px;
 }
-
 // Blockquote
 //
 // Markup: blockquote.hbs
@@ -85,13 +71,12 @@ body p {
 // Style guide: base.blockquote
 blockquote {
   padding: 0 15px;
-  color: $mine-shaft;
-  border-left: 4px solid $alto;
+  color: $lt-blk;
+  border-left: 4px solid $lt-gr;
   &:last-child {
     margin-bottom: 0;
   }
 }
-
 // List Types
 //
 // Markup: lists.hbs
@@ -107,15 +92,12 @@ ol {
     padding: 0;
   }
 }
-
 ol ol {
   padding: 0 0 0 22.5px;
 }
-
 ol ol ol {
   padding: 0 0 0 22.5px;
 }
-
 // UL items
 ul {
   padding: 0 0 0 30px;
@@ -125,15 +107,12 @@ ul {
     padding: 0;
   }
 }
-
 ul ul {
   padding: 0 0 0 22.5px;
 }
-
 ul ul ul {
   padding: 0 0 0 22.5px;
 }
-
 // Tables
 //
 // Markup: table.hbs
@@ -144,7 +123,7 @@ table {
   th {
     font-weight: 600;
     text-align: left;
-    background-color: $gallery;
+    background-color: $lt-gr;
     padding: 4px 5px;
   }
   td {
@@ -153,15 +132,15 @@ table {
     padding: 4px 5px;
   }
   thead {
-    border: 1px solid $alto;
+    border: 1px solid $lt-gr;
     border-bottom: 0;
   }
   tbody {
-    border: 1px solid $alto;
+    border: 1px solid $lt-gr;
   }
   tbody tr:nth-child(even) {
-    background-color: $porcelain;
-    border-top: 1px solid $alto;
-    border-bottom: 1px solid $alto;
+    background-color: $lt-gr;
+    border-top: 1px solid $lt-gr;
+    border-bottom: 1px solid $lt-gr;
   }
 }
