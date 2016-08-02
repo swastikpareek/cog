@@ -4,9 +4,9 @@ Nimbus is a developer-focused base theme and starterkit intended as a minimalist
 
 ### Features
 
-* Core *.yml and theme dependencies
 * Responsive containers built on Susy grid system
 * Initial SMACSS file architecture
+* Core *.yml and theme dependencies
 * Modular gulp tasks for compiling and linting
 * Living style guide construction via KSS-node
 
@@ -62,6 +62,7 @@ The core files are fairly minimal when setting up a new theme. These files are c
 
 ```
 
+
 ### Sass Structure
 
 Setup of the Sass files so that they are properly broken out in partials and according to the [SMACSS](https://smacss.com/) methodologies.
@@ -98,6 +99,14 @@ lib:
   js:
     js/theme.js: {}
 ```
+
+### Grid & Region Structure
+
+The Nimbus grid structure was setup with the intent of having a very minimalist starting point in terms to be confined within. 
+
+TODO: grid references
+TODO: file examples
+TODO: visual region image 
 
 
 ## Documentation & Code Examples
