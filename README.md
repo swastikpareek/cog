@@ -6,7 +6,8 @@ Nimbus is a developer-focused base theme and starterkit intended as a minimalist
 
 * Responsive containers built on Susy grid system
 * Initial SMACSS file architecture
-* Core *.yml and theme dependencies
+* Common Twig files and theme dependencies
+* Base preprocess functions for class definitions
 * Modular gulp tasks for compiling and linting
 * Living style guide construction via KSS-node
 
@@ -65,7 +66,7 @@ The core files are fairly minimal when setting up a new theme. These files are c
 
 ### Sass Structure
 
-Setup of the Sass files so that they are properly broken out in partials and according to the [SMACSS](https://smacss.com/) methodologies.
+Setup of the Sass files so that they are properly broken out in partials and according to the SMACSS methodologies.
 
 ```
 sass/
@@ -100,17 +101,34 @@ lib:
     js/theme.js: {}
 ```
 
-### Grid & Region Structure
+### Theme Layout
 
-The Nimbus grid structure was setup with the intent of having a very minimalist starting point in terms to be confined within. 
 
-TODO: grid references
-TODO: file examples
-TODO: visual region image 
+#### Grid System
+
+The Nimbus grid structure was setup with the intent of having a very minimalist starting point. The theme grid container is setup with a single class `.mq--t` located in `layout/_containers.scss` that contains the following starter Susy container: `@include container(80em)`. In the `layout/_sidebars.scss` file is the column code for each combination of sidebars based on the Susy syntax. The body classes are defined with a preprocess conditional in `[theme-name].theme` for each scenario.
+
+#### Theme Regions
+
+The regions avaiable are standard with classic sidebar region, along with pre and post content areas. The intent is to allow for containers to go full-width and rely on the grid containers for inner Susy containers. 
+
+```
+[theme-name].info.yml
+
+regions:
+  branding: Branding
+  header: Header
+  pre_content: 'Pre Content'
+  content: Content
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  post_content: 'Post Content'
+  footer: Footer
+```
+![regions](http://content.screencast.com/users/BedimStudios/folders/Jing/media/8ad8ecf1-bb60-4292-80b0-115fae8daac0/00001643.png)
 
 
 ## Documentation & Code Examples
-
 
 * [Front end best-practices](_theming-guide/front-end.md)
 * [Code reference for this theme](_theming-guide/preprocessing.md)
