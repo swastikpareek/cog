@@ -26,12 +26,12 @@ Available options for creating your new theme `drush help nimbus`
 
 ### Setup locally for development
 
-Once you have created a custom subtheme, you will know follow these quick steps to start. If you would like to review extension explanations of these steps, be sure to read the XXXXXXX
+Once you have created a custom subtheme, you will know follow these quick steps to start. If you would like to review extension explanations of these steps, be sure to read the <mark>TODO :: full setup readme</mark> 
 
 1. Navigate to `themes/custom/mytheme` folder in your terminal
 2. Install Node.js with `./install-node.sh 4.4.4` and then point to the proper version with `source ~/.bashrc && nvm use --delete-prefix 4.4.4` 
 3. If you are not using avn then run `nvm use 4.4.4` when closing and reopening your session
-4. If you choose to use avn follow the instructions here XXXXX
+4. If you choose to use avn follow the instructions here <mark>TODO :: full setup readme</mark>
 5. Install local library dependencies `npm run install-tools`
 6. To confirm Gulp and other items are instantiated `npm run build`
 
@@ -126,6 +126,16 @@ regions:
   footer: Footer
 ```
 ![regions](http://content.screencast.com/users/BedimStudios/folders/Jing/media/8ad8ecf1-bb60-4292-80b0-115fae8daac0/00001643.png)
+
+
+## Images 
+
+<mark>TODO</mark>
+
+
+## Gulp 
+
+<mark>TODO</mark>
 
 
 ## Documentation & Code Examples
