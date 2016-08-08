@@ -1,4 +1,4 @@
-# Quickstart
+# Nimbus Setup
 
 ## System Requirements
 
@@ -20,7 +20,7 @@ If you are not using avn or something similar then you will need to repeat `nvm 
 
 
 ### AVN (Automatic Version Switching for Node)
-
+<a name="avn"></a>
 #### Why would you want to install AVN?
 
 By default, nvm is session based so you will need to run `nvm use 4.4.1` again if you close your terminal and reopen it later. It is recommended to use a tool such as [avn](https://github.com/wbyoung/avn). This will pick up the node version from the `.node-version` file that the provided install script places in the theme directory. When you `cd` to the theme directory avn will use nvm to switch to the appropriate installed node version automatically.
