@@ -147,7 +147,10 @@ regions:
 The images designated for your custom theme can be placed in the `images/` folder. By default we do not have compression setup with subfolder, but do highly recommend based on need. Image compression and spriting requires vast differences with the amount images and this can be a task-intensive process for Gulp and automated builds. However for most of our builds, we do utilize both image compression and spriting with the standard subfolders with Gulp automation workflow: `images/src/` `images/dist/`
 
 
+## Further Documentation
 
+Nimbus also ships with an extensive list of documentation and code samples that were intentionally left of of the theme. 
+We have collected all the examples in an easy reference [listed here](_theming-guide/readme.md).
 
 
 

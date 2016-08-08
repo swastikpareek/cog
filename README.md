@@ -1,9 +1,15 @@
-## Nimbus Documentation
+## Getting started with Nimbus
 
 
 The Nimbus documentation you seek is now located in the following directory: `STARTERKIT/README.md`. This documentation will cover setup steps with Nimbus and overall D8 theme documenation with code examples. 
 
 <!-- TODO: link to public readme when available -->
+
+
+## Further Documentation
+
+Nimbus also ships with an extensive list of documentation and code samples that were intentionally left of of the theme. 
+We have collected all the examples in an easy reference [listed here](STARTERKIT/_theming-guide/readme.md).
 
 <br>
 

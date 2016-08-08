@@ -1,54 +1,4 @@
-# Theming Guide: Front End
-
-## TOC
-- [Purpose](#purpose)
-- [Base Theme](#base-theme)
-- [Grid System](#grid-system)
-- [Markup](#markup)
-- [CSS Architecture](#css)
-- [CSS Preprocessing](#css-preprocessing)
-- [Style Rules](#style-rules)
-- [Conditional CSS](#conditional-css)
-- [Media Queries](h#media-queries)
-- [Links](#links)
-
-## Purpose
-This document is meant to be a reference to general front end techniques and how they fit in to a Drupal theming workflow. Emphasis is on defining Drupal specific terms and front end concepts and providing links for further research.
-
-## Base Theme
-A base theme provides a consistent starting point and tools for Drupal theming work. There are several base themes within Drupal core and many others that are provided as contrib projects (Some popular examples: [Zen](https://www.drupal.org/project/zen), [Omega](https://www.drupal.org/project/omega)). Base themes are meant to be extended by sub themes and often contain tools for generating these sub themes with minimal effort. A base theme is meant to be left unaltered and used as a reference point. Custom work should be done in the generated sub theme.  
-
-In most situations a full blown framework as a base theme isn’t recommended. Frameworks such as Bootstrap or Foundation are great starting points when the site is designed based on the framework. But, when they aren’t, they can add over 100kb & 6000 lines of CSS to a project that is mostly being overwritten or largely unused.
-
-
-## Markup
-Consistent markup makes life easier. Just like building a site outside of Drupal, you want to reuse html elements appropriately for both semantics and consistency. Classes are provided by Drupal core and Drupal contrib modules. These can be used, removed or overridden as needed in your sub theme. The way that Drupal 8 controls markup is via [Twig](http://twig.sensiolabs.org/) templates. It is not necessary to edit these templates to use a Drupal theme, but they provide a great deal of power in customizing your site markup to do what you need.
-
-### Example Drupal Twig template
-
-#### Filename
-`username.html.twig`
-
-#### File contents
-```twig
-{% if link_path -%}
-  <a{{ attributes.addClass(‘username’) }}>{{ name }}{{ extra }}</a>
-{%- else -%}
-  <span{{ attributes }}>{{ name }}{{ extra }}</span>
-{%- endif -%}
-```
-
-### Overriding Twig templates
-Your sub theme can override any template from the base theme, contrib modules or Drupal core. This is the overview of the process: locate the template, copy it into your sub theme, modify it, clear Drupal’s caches.
-
-More detailed information can be found in the official Drupal documentation:
-[Working with Twig Templates](https://www.drupal.org/node/2186401)
-[Locating Template File with Debugging](https://www.drupal.org/node/2358785)
-
-
-## CSS Architecture
-
-### Style Organization
+## Sass Style Organization
 This theme breaks down stylesheets according to the SMACSS-BEM methodology, similar to the core theme Classy. The following categories are broken down into actual folders that contain sass partials. Everything in these folders is compiled down to a single stylesheet that is loaded by the theme.
 
 - **Base Rules** > Base styles for HTML elements and normalization rules
@@ -61,7 +11,7 @@ This theme breaks down stylesheets according to the SMACSS-BEM methodology, simi
 
 *With SMACSS, the intent is to keep the styles that pertain to a specific component with the rest of the component. That means that instead of having a single break point, either in a main CSS file or in a separate media query style sheet, place media queries around the component states.*
 
-### Example Component rule with media query.
+## Example Component rule with media query.
 
 **CSS Version**
 
@@ -87,7 +37,7 @@ This theme breaks down stylesheets according to the SMACSS-BEM methodology, simi
 }
 ```
 
-### CSS Preprocessing
+## CSS Preprocessing
 CSS preprocessors allow themers to be more efficient when developing a sub theme. We prefer SASS, using scss syntax, and using Compass. These are the Zen 5 defaults and work well. We recommend using Compass for creating sprites for your site using two sprite directories, one for standard resolution, one for retina resolutions.
 
 The majority of your scss files should be partials. These partials are then imported into a single scss file and compiled out as one file. For example:
@@ -108,7 +58,7 @@ The majority of your scss files should be partials. These partials are then impo
 @import "components/footer";
 ```
 
-### Style Rules
+## Style Rules
 When writing styles, the themer’s goal should be to write efficient CSS. This means using the least amount of selectors possible. The best performance in CSS is the ID, but this is often not a realistic selector to use because it limits it's reusability. The exceptions are for layout rules and unique rules for unique items, like the site-name. After that is the class selector, which should be the target of the majority of your rules. Though we write CSS left to right ( `#content .field-item p` ) a browser reads CSS right to left. So in the previous rule, it would first find every paragraph on the page. Then it invalidate the ones that aren’t inside a `.field-item` class. Then invalidate the remaining ones that aren’t inside of an element with the ID `#content`. **When using a CSS Preprocessor, a lot of care needs to be taken in regards to selector depth. It’s extremely easy to nest selectors which will result in extremely inefficient styles.**
 
 Keep your styles generic when you can, think broad strokes. If you can, apply your style to `.field-item` instead of `.article .field-item`. Likewise, when you need to apply the style to a more limited scope, use the semantic class and not the drupal generic class. So, use `.view-articles` instead of simply `.view`.
@@ -209,4 +159,3 @@ There are two ways to really build a responsive site. Which way you go, usually 
 
 ### Drupal Guides
 - [Drupal 8 Theming Guide](https://www.drupal.org/theme-guide/8)
-
