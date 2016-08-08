@@ -13,7 +13,18 @@ Nimbus is a developer-focused base theme and starterkit intended as a minimalist
 
 ## Set up your Theme with Nimbus
 
-### Create your Starter Theme
+Nimbus is created with the intent of being used as a traditional base theme. By following the steps listed next, you will be cloning the starter sub-theme located in `nimbus/STARTERKIT`. This allows for proper delineation of the original Nimbus code from your custom theme.  
+
+```
+contrib/ (theme folder)
+|-- nimbus/
+|---- STARTERKIT/ 
+
+custom (theme folder)
+|-- mytheme/ (cloned from starterkit) 
+```
+
+### Create your custom sub-theme
 
 1. In your `themes/` directory create the `contrib` and `custom` directories
 2. Download Nimbus into the `themes/contrib` folder and enable Nimbus using `drush en nimbus`
@@ -60,7 +71,6 @@ The core files are fairly minimal when setting up a new theme. These files are c
 |-- [theme-name].libraries.yml (starter libraries file to load theme assets)
 |-- [theme-name].theme (file to use for preprocess functions)
 |-- theme-settings.php (file to use for making theme settings available in the GUI)
-
 ```
 
 
