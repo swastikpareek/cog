@@ -1,6 +1,8 @@
-// -------------------------------------
-//   Task: Lint: Scripts
-// -------------------------------------
+/**
+ * @file
+ * Task: Lint: Scripts.
+ */
+
 'use strict';
 module.exports = function (gulp, plugins, options) {
   // Lint JavaScript.

@@ -1,6 +1,8 @@
-// -------------------------------------
-//   Task: Compile: Sass
-// -------------------------------------
+/**
+ * @file
+ * Task: Compile: Sass.
+ */
+
 'use strict';
 module.exports = function (gulp, plugins, options) {
   gulp.task('compile:sass', function () {

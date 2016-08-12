@@ -1,6 +1,8 @@
-// -------------------------------------
-//   Task: Minify:CSS
-// -------------------------------------
+/**
+ * @file
+ * Task: Minify:CSS.
+ */
+
 'use strict';
 module.exports = function (gulp, plugins, options) {
   gulp.task('minify:css', function () {

@@ -1,6 +1,8 @@
-// -------------------------------------
-//   Task: Clean:CSS
-// -------------------------------------
+/**
+ * @file
+ * Task: Clean:CSS.
+ */
+
 'use strict';
 module.exports = function (gulp, plugins, options) {
   // Clean CSS files.
