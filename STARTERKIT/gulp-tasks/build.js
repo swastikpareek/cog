@@ -1,6 +1,8 @@
-// -------------------------------------
-//   Task: Build
-// -------------------------------------
+/**
+ * @file
+ * Task: Build.
+ */
+
 'use strict';
 module.exports = function (gulp, plugins, options) {
   gulp.task('build', [

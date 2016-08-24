@@ -1,6 +1,8 @@
-// -------------------------------------
-//   Task: Test: CSS
-// -------------------------------------
+/**
+ * @file
+ * Task: Test: CSS.
+ */
+
 'use strict';
 module.exports = function (gulp, plugins, options) {
   gulp.task('test:css', function () {

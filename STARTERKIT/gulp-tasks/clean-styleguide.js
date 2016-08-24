@@ -1,6 +1,8 @@
-// -------------------------------------
-//   Task: Clean:Styleguide
-// -------------------------------------
+/**
+ * @file
+ * Task: Clean:Styleguide.
+ */
+
 'use strict';
 module.exports = function (gulp, plugins, options) {
   // Clean style guide files.
