@@ -19,15 +19,6 @@
 
     <header id="header">
         <div class="mq--t">
-
-            {#{% if logo %}#}
-            {#<a href="{{ front_page }}" id="logo" rel="home" title="{{ 'Home'|t }}">#}
-            {#<svg height="100%" preserveAspectRatio="xMidYMid meet" version="1.0" viewBox="0 0 100.000000 114.000000" width="100%" xmlns="http://www.w3.org/2000/svg">#}
-            {#<use xlink:href="/{{ directory }}/logo.svg#logo"></use>#}
-            {#</svg>#}
-            {#</a>#}
-            {#{% endif %}#}
-
             {% if page.header %}
                 <div id="header-region">
                     {{ page.header }}

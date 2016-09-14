@@ -1,6 +1,6 @@
 name: Nimbus
 type: theme
-description: 'Acquia D8 starter theme'
+description: 'Acquia D8 base theme'
 package: Core
 core: 8.x
 libraries:
