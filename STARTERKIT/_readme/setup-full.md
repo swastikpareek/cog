@@ -1,4 +1,4 @@
-# Nimbus Setup
+# Cog Setup
 
 ## System Requirements
 

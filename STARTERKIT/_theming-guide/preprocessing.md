@@ -17,8 +17,8 @@ This document is a reference for techniques to customize theme templates, such a
 The preprocess functions are essentially the same as D7, with just printing as a twig variable instead of PHP.  
 
 ```
-// nimbus.theme
-function nimbus_preprocess_node(&$variables) {
+// cog.theme
+function cog_preprocess_node(&$variables) {
   $variables[‘custom_variable_node_id’] = ‘custom-var-‘ . $variables[‘node’]->nid->value;
 }
 
@@ -32,8 +32,8 @@ function nimbus_preprocess_node(&$variables) {
 You can reference existing classes to create new classes for preprocess functions.
 
 ```
-// nimbus.theme
-function nimbus_preprocess_html(&$variables) {
+// cog.theme
+function cog_preprocess_html(&$variables) {
   // Get current user.
   $user = \Drupal::currentUser();
   $roles = $user->getRoles();
@@ -49,9 +49,9 @@ function nimbus_preprocess_html(&$variables) {
 Just like in D7, you can create new variables in the preprocess functions that will be rendered within the twig files. 
 
 ```
-// nimbus.theme
-function nimbus_preprocess_page(&$variables, $hook) {
-  $variables[‘theme_path’] = drupal_get_path(‘theme’, ‘nimbus’);
+// cog.theme
+function cog_preprocess_page(&$variables, $hook) {
+  $variables[‘theme_path’] = drupal_get_path(‘theme’, ‘cog’);
 }
 ```
 

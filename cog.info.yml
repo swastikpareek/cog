@@ -1,10 +1,10 @@
-name: Nimbus
+name: Cog
 type: theme
 description: 'Acquia D8 base theme'
 package: Core
 core: 8.x
 libraries:
-  - nimbus/lib
+  - cog/lib
 regions:
   branding: Branding
   header: Header

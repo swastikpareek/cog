@@ -3,7 +3,7 @@
 ### Adding in external css files thru theme library
 
 ```
-// nimbus.libraries.yml
+// cog.libraries.yml
 lib:
   css:
     theme:
@@ -17,7 +17,7 @@ lib:
 /**
  * Implements hook_css_alter().
  */
-function nimbus_css_alter(&$css) {
+function cog_css_alter(&$css) {
   // Add CDN Google fonts.
   $googlefonts = '//fonts.googleapis.com/css?family=Open+Sans:400,700,300|Signika:400,700';
   $css[$googlefonts] = array(

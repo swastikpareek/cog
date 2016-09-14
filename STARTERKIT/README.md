@@ -1,6 +1,6 @@
-## Nimbus: Acquia D8 Theme
+## Cog: Acquia D8 Theme
 
-Nimbus is a developer-focused base theme and starterkit created by Acquia's Professional Service FrontEnd Team. It intended as a minimalist starting point for custom theming, while exposing common tools and workflows. Nimbus provides a small amount of code to get started, but still packed with utilities and documentation to start quickly.
+Cog is a developer-focused base theme and starterkit created by Acquia's Professional Service FrontEnd Team. It intended as a minimalist starting point for custom theming, while exposing common tools and workflows. Cog provides a small amount of code to get started, but still packed with utilities and documentation to start quickly.
 
 ### Features
 
@@ -11,13 +11,13 @@ Nimbus is a developer-focused base theme and starterkit created by Acquia's Prof
 * Modular gulp tasks for compiling and linting
 * Living style guide construction via KSS-node
 
-## Set up your Theme with Nimbus
+## Set up your Theme with Cog
 
-Nimbus is created with the intent of being used as a traditional base theme. By following the steps listed next, you will be cloning the starter sub-theme located in `nimbus/STARTERKIT`. This allows for proper delineation of the original Nimbus code from the flexible aspects of your custom theme.  
+Cog is created with the intent of being used as a traditional base theme. By following the steps listed next, you will be cloning the starter sub-theme located in `cog/STARTERKIT`. This allows for proper delineation of the original Cog code from the flexible aspects of your custom theme.  
 
 ```
 contrib/ (theme folder)
-|-- nimbus/
+|-- cog/
 |---- STARTERKIT/ 
 custom/ (theme folder)
 |-- mytheme/ (cloned from starterkit) 
@@ -26,13 +26,13 @@ custom/ (theme folder)
 ### Create your custom sub-theme
 
 * In your `themes/` directory create the `contrib` and `custom` directories
-* Download Nimbus into the `themes/contrib` folder and enable Nimbus using `drush en nimbus`
-* Set Nimbus as your default theme: `drush config-set system.theme default nimbus`
-* To create a subtheme using the default options use `drush nimbus "MyTheme"`
+* Download Cog into the `themes/contrib` folder and enable Cog using `drush en cog`
+* Set Cog as your default theme: `drush config-set system.theme default cog`
+* To create a subtheme using the default options use `drush cog "MyTheme"`
 * Enable your new `MyTheme` theme with `drush en mytheme` which is located in `themes/custom`
 * Set `MyTheme` as your default theme `drush config-set system.theme default mytheme`
 
-Available options for creating your new theme `drush help nimbus`
+Available options for creating your new theme `drush help cog`
 
 ### Setup locally for development
 
@@ -107,7 +107,7 @@ The Gulp installation and tasks are setup to work on install, but are still inte
 
 ### JavaScript Files
 
-An example JS file `theme.js` is added by default in the `js/` folder. This file contains sample code wrapped in the `Drupal.behaviors` code standard. This JS file is added to the theme with the following portion of the code from `[theme-name].libraries.yml`. Nimbus does not have compression enabled for Gulp since it is relying on Drupal's caching system. 
+An example JS file `theme.js` is added by default in the `js/` folder. This file contains sample code wrapped in the `Drupal.behaviors` code standard. This JS file is added to the theme with the following portion of the code from `[theme-name].libraries.yml`. Cog does not have compression enabled for Gulp since it is relying on Drupal's caching system. 
 
 ```
 lib:
@@ -120,7 +120,7 @@ lib:
 
 #### Grid System
 
-The Nimbus grid structure was setup with the intent of having a very minimalist starting point. The theme grid container is setup with a single class `.mq--t` located in `layout/_containers.scss` that contains the following starter Susy container: `@include container(80em)`. In the `layout/_sidebars.scss` file is the column code for each combination of sidebars based on the Susy syntax. The body classes are defined with a preprocess conditional in `[theme-name].theme` for each scenario.
+The Cog grid structure was setup with the intent of having a very minimalist starting point. The theme grid container is setup with a single class `.mq--t` located in `layout/_containers.scss` that contains the following starter Susy container: `@include container(80em)`. In the `layout/_sidebars.scss` file is the column code for each combination of sidebars based on the Susy syntax. The body classes are defined with a preprocess conditional in `[theme-name].theme` for each scenario.
 
 #### Theme Regions
 
@@ -149,7 +149,7 @@ The images designated for your custom theme can be placed in the `images/` folde
 
 ## Further Documentation
 
-Nimbus also ships with an extensive list of documentation and code samples that were intentionally left of of the theme. 
+Cog also ships with an extensive list of documentation and code samples that were intentionally left of of the theme. 
 We have collected all the examples in an easy reference [listed here](_theming-guide/readme.md).
 
 

@@ -10,11 +10,11 @@
 /**
  * Implements hook_drush_command().
  */
-function nimbus_drush_command() {
+function cog_drush_command() {
   $items = array();
 
-  $items['nimbus'] = array(
-    'description' => 'Create a theme using nimbus.',
+  $items['cog'] = array(
+    'description' => 'Create a theme using cog.',
     'arguments' => array(
       'machine_name' => '[optional] A machine-readable name for your theme.',
       'name'         => 'A name for your theme.',
@@ -26,9 +26,9 @@ function nimbus_drush_command() {
       'description'  => 'A description of your theme.',
     ),
     'examples' => array(
-      'drush nimbus "Theme name"' => 'Create a sub-theme, using the default options.',
-      'drush nimbus some_theme "Theme name"' => 'Create a sub-theme with a specific machine name.',
-      'drush nimbus "Theme name" --path=themes --description="This is a theme."' => 'Create a sub-theme in the specified directory with a custom description.',
+      'drush cog "Theme name"' => 'Create a sub-theme, using the default options.',
+      'drush cog some_theme "Theme name"' => 'Create a sub-theme with a specific machine name.',
+      'drush cog "Theme name" --path=themes --description="This is a theme."' => 'Create a sub-theme in the specified directory with a custom description.',
     ),
   );
 
@@ -36,9 +36,9 @@ function nimbus_drush_command() {
 }
 
 /**
- * Create a nimbus sub-theme using the starter kit.
+ * Create a cog sub-theme using the starter kit.
  */
-function drush_nimbus($machine_name = NULL, $name = NULL) {
+function drush_cog($machine_name = NULL, $name = NULL) {
 
   // ***************************************************
   // Determine all the command line options given.
@@ -64,7 +64,7 @@ function drush_nimbus($machine_name = NULL, $name = NULL) {
       $name = $machine_name;
     }
     else {
-      return drush_set_error('NIMBUS_SUBTHEME_NAME_NOT_SPECIFIED', dt('The name of the theme was not specified.'));
+      return drush_set_error('COG_SUBTHEME_NAME_NOT_SPECIFIED', dt('The name of the theme was not specified.'));
     }
   }
 
@@ -94,20 +94,20 @@ function drush_nimbus($machine_name = NULL, $name = NULL) {
   // ***************************************************.
   // Ensure the destination directory (not the sub-theme folder) exists.
   if (!is_dir(dirname($sub_theme_path))) {
-    return drush_set_error('NIMBUS_DESTINATION_NOT_FOUND', dt('The directory "!directory" was not found.', array('!directory' => dirname($sub_theme_path))));
+    return drush_set_error('COG_DESTINATION_NOT_FOUND', dt('The directory "!directory" was not found.', array('!directory' => dirname($sub_theme_path))));
   }
 
   // Ensure the STARTERKIT directory exists.
-  $starterkit_path = drush_normalize_path(drush_get_context('DRUSH_DRUPAL_ROOT') . '/' . drupal_get_path('theme', 'nimbus') . '/STARTERKIT');
+  $starterkit_path = drush_normalize_path(drush_get_context('DRUSH_DRUPAL_ROOT') . '/' . drupal_get_path('theme', 'cog') . '/STARTERKIT');
   if (!is_dir($starterkit_path)) {
-    return drush_set_error('NIMBUS_STARTERKIT_NOT_FOUND', dt('The STARTERKIT directory was not found in "!directory"', array('!directory' => dirname($starterkit_path))));
+    return drush_set_error('COG_STARTERKIT_NOT_FOUND', dt('The STARTERKIT directory was not found in "!directory"', array('!directory' => dirname($starterkit_path))));
   }
 
   drush_print(dt('Copying files from starter kit…'));
 
   // Make a fresh copy of the original starter kit.
   if (!drush_op('drush_copy_dir', $starterkit_path, $sub_theme_path)) {
-    // drush_copy_dir errors are fatal errors for our nimbus drush command.
+    // drush_copy_dir errors are fatal errors for our cog drush command.
     return FALSE;
   }
 
@@ -117,16 +117,16 @@ function drush_nimbus($machine_name = NULL, $name = NULL) {
   drush_print(dt('Updating .info.yml file…'));
 
   $info_strings = array(
-    ': Nimbus Sub-theme Starter Kit' => ': ' . $name,
+    ': Cog Sub-theme Starter Kit' => ': ' . $name,
     '# core: 8.x' => 'core: 8.x',
     "core: '8.x'\n" => '',
-    "project: 'nimbus'\n" => '',
+    "project: 'cog'\n" => '',
   );
   if ($description = drush_get_option('description')) {
-    $info_strings['Read the included README.md on how to create a theme with nimbus.'] = $description;
+    $info_strings['Read the included README.md on how to create a theme with cog.'] = $description;
   }
 
-  drush_op('nimbus_file_replace', $sub_theme_path . '/STARTERKIT.info.yml', $info_strings);
+  drush_op('cog_file_replace', $sub_theme_path . '/STARTERKIT.info.yml', $info_strings);
 
   // ***************************************************
   // Replace STARTERKIT in file names and contents.
@@ -165,7 +165,7 @@ function drush_nimbus($machine_name = NULL, $name = NULL) {
 
   foreach ($sub_theme_files as $filename) {
     // Replace occurrences of 'STARTERKIT' with machine name of our sub theme.
-    drush_op('nimbus_file_replace', $filename, array('STARTERKIT' => $machine_name));
+    drush_op('cog_file_replace', $filename, array('STARTERKIT' => $machine_name));
 
     // Rename all files with STARTERKIT in their name.
     if (strpos($filename, 'STARTERKIT') !== FALSE) {
@@ -185,7 +185,7 @@ function drush_nimbus($machine_name = NULL, $name = NULL) {
 /**
  * Replace strings in a file.
  */
-function nimbus_file_replace($file_path, $strings, $regexs = array()) {
+function cog_file_replace($file_path, $strings, $regexs = array()) {
   $file_path = drush_normalize_path($file_path);
   $file_contents = file_get_contents($file_path);
 
