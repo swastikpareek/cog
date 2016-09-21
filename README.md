@@ -20,7 +20,7 @@ Professional Services' best practices.
 Please feel free to contribute to the project or file issues via the GitHub
 issue queue. When doing so, please keep the following points in mind:
 
-* Cog is distributed under the GPLv3 license; WITHOUT ANY WARRANTY.
+* Cog is distributed under the GPLv2 license; WITHOUT ANY WARRANTY.
 * The project maintainers make no commitment to respond to support requests,
   feature requests, or pull requests.
 * All contributions to Cog will be reviewed for compliance with Drupal Coding
