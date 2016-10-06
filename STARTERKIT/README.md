@@ -124,7 +124,7 @@ The Cog grid structure was setup with the intent of having a very minimalist sta
 
 #### Theme Regions
 
-The regions avaiable are standard with classic sidebar region, along with pre and post content areas. The intent is to allow for containers to go full-width and rely on the grid containers for inner Susy containers. 
+The regions available are standard with classic sidebar region, along with pre and post content areas. The intent is to allow for containers to go full-width and rely on the grid containers for inner Susy containers.
 
 ```
 [theme-name].info.yml
