@@ -8,9 +8,9 @@ libraries:
 regions:
   branding: Branding
   header: Header
-  pre_content: Pre Content
+  pre_content: Pre content
   content: Content
   sidebar_first: 'Sidebar first'
   sidebar_second: 'Sidebar second'
-  post_content: Post Content
+  post_content: Post content
   footer: Footer
