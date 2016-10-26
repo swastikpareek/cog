@@ -74,8 +74,8 @@ install:
   # Set up front end dependencies.
   - cd $COGNIZANT_DIR
 
-  - ./install-node.sh 4.4.4
-  - nvm use 4.4.4
+  - ./install-node.sh 6.9.0
+  - nvm use 6.9.0
   - npm i -g yarn --cache-min 999999999
   - yarn
   # Waiting on https://github.com/yarnpkg/website/issues/192
