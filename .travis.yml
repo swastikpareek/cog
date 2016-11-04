@@ -71,7 +71,7 @@ install:
   - drush en cog -y
   - drush cog "Cognizant"
 
-  # Set up front end dependencies.
+  # Set up front-end dependencies.
   - cd $COGNIZANT_DIR
 
   - ./install-node.sh 6.9.0

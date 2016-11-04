@@ -32,7 +32,6 @@
 
 * In your `themes/` directory create the `contrib/` and `custom/` directories
 * Download Cog into the `themes/contrib` folder and enable using `drush en cog`
-* Set Cog as your default theme `drush config-set system.theme default cog`
 * Create the sub-theme with `drush cog "MyTheme"`
 * Enable your new `MyTheme` theme with `drush en mytheme` which is located in `themes/custom`
 * Set `MyTheme` as your default theme `drush config-set system.theme default mytheme`
@@ -55,7 +54,7 @@ Once you have created a custom sub-theme, you will setup for local compiling. If
 
 ## Overview
 
-Cog is a developer-focused base theme and starterkit created by Acquia's Professional Service FrontEnd Team. It is intended as a minimalistic baseline for custom theming, while exposing common tools and workflows. Cog provides a small amount of code to get started, but is still packed with utilities to extend.
+Cog is a developer-focused base theme and starterkit created by Acquia's Professional Service Front-end Team. It is intended as a minimalistic baseline for custom theming, while exposing common tools and workflows. Cog provides a small amount of code to get started, but is still packed with utilities to extend.
 
 * Responsive containers built on Susy grid system
 * Initial SMACSS file architecture

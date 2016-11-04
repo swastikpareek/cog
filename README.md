@@ -1,6 +1,6 @@
 ## Cog
 
-Cog is a developer-focused base theme and starterkit created by Acquia's Professional Service FrontEnd Team. It is intended as a minimalistic baseline for custom theming, while exposing common tools and workflows. Cog provides a small amount of code to get started, but is still packed with utilities to extend.
+Cog is a developer-focused base theme and starterkit created by Acquia's Professional Service Front-end Team. It is intended as a minimalistic baseline for custom theming, while exposing common tools and workflows. Cog provides a small amount of code to get started, but is still packed with utilities to extend.
 
 * Responsive containers built on Susy grid system
 * Initial SMACSS file architecture
