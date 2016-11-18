@@ -1,6 +1,6 @@
 ## Getting started with Cog
 
-The Cog documentation you seek is now located in the following directory: `STARTERKIT/README.md`. This documentation will cover setup steps with Cog and overall D8 theme documenation with code examples.
+The Cog documentation you seek is now located in the following directory: [STARTERKIT/README.md](STARTERKIT/README.md). This documentation will cover setup steps with Cog and overall D8 theme documenation with code examples.
 
 <!-- TODO: link to public readme when available -->
 
