@@ -8,7 +8,7 @@
             </li>
         </ul>
     </li>
-    <li><a href="#overview">Overview</a>
+    <li><a href="#overview">Theme Overview</a>
         <ul>
             <li><a href="#folder-structure">Folder Structure</a></li>
             <li><a href="#sass-structure">Sass Structure</a></li>
@@ -27,6 +27,8 @@
 
 
 ## Installation
+
+The Cog theme is set up to utilize the `base => sub-theme` relationship. The steps below will create your custom sub-theme that is cloned from `STARTERKIT/` folder, along with installing the proper dependencies to setup in a matter of minutes. This approach supports release updates, in addition to providing source references for required and optional pieces.
 
 ### Create Cog Sub-Theme
 
@@ -52,7 +54,7 @@ Once you have created a custom sub-theme, you will setup for local compiling. If
 * You can now compile both your Sass and JS with `gulp watch`
 
 
-## Overview
+## Theme Overview
 
 Cog is a developer-focused base theme and starterkit created by Acquia's Professional Service Front-end Team. It is intended as a minimalistic baseline for custom theming, while exposing common tools and workflows. Cog provides a small amount of code to get started, but is still packed with utilities to extend.
 
