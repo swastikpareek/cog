@@ -9,17 +9,32 @@ Cog is a developer-focused base theme and starterkit created by Acquia's Profess
 * Modular gulp tasks for compiling and linting
 * Living style guide construction via KSS-node
 
-### Let's get started!
+
+#### Let's get started!
 The Cog documentation you seek is located [here](https://github.com/acquia-pso/cog/tree/8.x-1.x/STARTERKIT/README.md). This documentation will cover [installation steps](https://github.com/acquia-pso/cog/tree/8.x-1.x/STARTERKIT/README.md#installation) and a theme [overview](https://github.com/acquia-pso/cog/tree/8.x-1.x/STARTERKIT/README.md#overview) to provide insight into internal methodologies.
 
+#### Got Questions? 
+
+Be sure to visit our [about document](https://github.com/acquia-pso/cog/tree/8.x-1.x/STARTERKIT/_readme/about-cog.md) for high-level insight into topics including "[Background of Cog](https://github.com/acquia-pso/cog/tree/8.x-1.x/STARTERKIT/_readme/about-cog.md#created)" and "[Comparing Cog to frameworks](https://github.com/acquia-pso/cog/tree/8.x-1.x/STARTERKIT/_readme/about-cog.md#compare)"? 
+<a name="created"></a> 
+
+
 <br>
+
+<!--
+
+Let's wait until this is cleaner....
 
 ## Further Documentation
 
 Cog also ships with an extensive list of documentation and code samples that were intentionally left of of the theme. We have collected all the examples in an easy reference [listed here](STARTERKIT/_theming-guide/readme.md).
 
+-->
 
-## License, support, and contribution
+<hr />
+
+
+### License, support, and contribution
 
 Cog is provided as an open source tool in the hope that it will enabled
 developers to easily generate new Drupal projects that conform to Acquia
