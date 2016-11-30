@@ -1,12 +1,11 @@
-## Subject Matter (eg. JS, Preprocess, etc)
+## Theming Guide: Subject Matter (eg. JS, Preprocess, etc)
 Subject intro text 
 
 ###Table of Contents
-<ul>
-<li><a href="#example">Example Link</a></li>
-<li><a href="#example">Example Link</a></li>
-<li><a href="#example">Example Link</a></li>
-</ul>
+- <a href="#example">Example Link</a>
+- <a href="#example">Example Link</a>
+- <a href="#example">Example Link</a>
+
 
 
 
