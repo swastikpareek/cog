@@ -1,7 +1,8 @@
 lib:
   version: VERSION
   css:
-    theme:
+    fonts:
+      '//fonts.googleapis.com/css?family=Open+Sans:400,700,300': { type: external} # external font
+      fonts/signika.css: {} # local font
+    global:
       css/styles.css: {}
-      '//fonts.googleapis.com/css?family=Open+Sans:400,700,300': { type: external}
-      '//fonts.googleapis.com/css?family=Signika:400,700': { type: external}
