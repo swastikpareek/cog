@@ -1,5 +1,8 @@
 lib:
   version: VERSION
+  dependencies:
+    - core/jquery
+    - core/drupal
   css:
     fonts:
       '//fonts.googleapis.com/css?family=Open+Sans:400,700,300': { type: external} # external font
