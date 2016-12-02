@@ -3,8 +3,9 @@
  * Task: Watch.
  */
 
-'use strict';
 module.exports = function (gulp, plugins, options) {
+  'use strict';
+
   gulp.task('watch', ['watch:sass', 'watch:styleguide', 'watch:js']);
 
   gulp.task('watch:js', function () {
