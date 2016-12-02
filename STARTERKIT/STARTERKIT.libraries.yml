@@ -1,11 +1,11 @@
-lib:
+fonts:
   version: VERSION
-  dependencies:
-    - core/jquery
-    - core/drupal
   css:
-    fonts:
+    theme:
       '//fonts.googleapis.com/css?family=Open+Sans:400,700,300': { type: external} # external font
       fonts/signika.css: {} # local font
-    global:
+global:
+  version: VERSION
+  css:
+    theme:
       css/styles.css: {}
