@@ -4,7 +4,8 @@ description: 'Acquia D8 starter theme'
 core: 8.x
 base theme: cog
 libraries:
-  - STARTERKIT/lib
+  - STARTERKIT/fonts
+  - STARTERKIT/global
 regions:
   branding: Branding
   header: Header
