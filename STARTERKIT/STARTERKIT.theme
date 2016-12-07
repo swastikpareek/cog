@@ -104,10 +104,16 @@ function STARTERKIT_preprocess_node(&$variables) {
  */
 function STARTERKIT_preprocess_region(&$variables) {
   $elements = $variables['elements'];
+  $variables['content'] = array();
   $region_children = Element::children($elements);
   $variables['region'] = $elements['#region'];
   // Utility regional classes for $content.
-  $variables['content'] = array();
+  foreach ($region_children as $key => $val) {
+    if (empty($variables['elements'][$val]['#markup'])) {
+      unset($region_children[$key]);
+    }
+  }
+  $region_children = array_values(array_filter($region_children));
   foreach ($region_children as $k => $v) {
     $region_classes = Html::cleanCssIdentifier('regioncol--' . ($k + 1) . '-of-' . count($region_children));
     $variables['content'][] = '<div class="' . $region_classes . '">' . $variables['elements'][$v]['#markup'] . '</div>';
