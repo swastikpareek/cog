@@ -64,6 +64,16 @@ a:visited {
 body p {
   margin: 3px 0 10px;
 }
+
+
+// Responsive Images
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
 // Blockquote
 //
 // Markup: blockquote.hbs
