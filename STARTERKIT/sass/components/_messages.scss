@@ -6,12 +6,12 @@
   @extend .tmp-shadow;
   ol { @extend .no-ul-list; }
   &.messages--status {
-    background: rgba($sft-blu, .3);
-    color: $sft-blu;
+    background: $off-white;
+    color: $dark-gray;
   }
   &.messages--warning {
     background: rgba($yellow, .3);
-    color: $dk-gr;
+    color: $dark-gray;
   }
   &.messages--error {
     background: rgba($red, .3);
