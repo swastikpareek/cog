@@ -28,10 +28,26 @@ columns: 12, // The number of columns in your grid
 gutters: 1/4, // The size of a gutter in relation to a single column
 );
 
-// Breakpoints ///////////////
-$min-tablet: 768px;
+// Breakpoints & MQ's ///////////////
+$screen: "only screen" !default;
+$small-max: 767px !default;
+$medium-max: 1023px !default;
 
-// baseline mq's
+$small:  "#{$screen} and (max-width: #{$small-max})";
+$up-sm:  "#{$screen} and (min-width: #{$small-max + 1})";
+$medium: "#{$screen} and (min-width: #{$small-max + 1}) and (max-width: #{$medium-max})";
+$large:  "#{$screen} and (min-width: #{$medium-max + 1})";
+
+// EXAMPLE FOR MQ REFERENCES =>
+/*
+body {
+  background: green !important;
+  @media #{$small}  { background: orange !important; }
+  @media #{$medium} { background: teal !important; }
+  @media #{$large}  { background: orchid !important; }
+  @media #{$up-sm}  { background: aliceblue !important; }
+}
+*/
 
 // Example Mixins ///////////////
 @mixin opac-color($r, $g, $b, $pertc) {
