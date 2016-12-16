@@ -9,13 +9,13 @@ form {
   margin: 0 0 1em;
 }
 label {
-  margin: 0;
   display: inline-block;
   color: $dark-gray;
   cursor: pointer;
   font-weight: 500;
-  margin-bottom: 0.1875em;
-  padding-right: 2.5px;
+  margin: 0 0 0.1875em 0;
+  padding-right: 4px;
+  vertical-align: top;
 }
 input[type="text"],
 input[type="password"],
@@ -45,12 +45,6 @@ textarea:focus {
   background: white;
   outline: none;
 }
-input[type="text"][disabled],
-input[type="password"][disabled],
-input[type="date"][disabled],
-textarea[disabled] {
-  background-color: $off-white;
-}
 input[type="file"],
 input[type="checkbox"],
 input[type="radio"],
@@ -61,7 +55,7 @@ input[type="file"] {
   width: 100%;
 }
 fieldset {
-  border: solid 1px $off-white;
+  border: solid 1px $light-gray;
   padding: 1.25em;
   margin: 1.125em 0;
 }
@@ -71,6 +65,18 @@ fieldset legend {
   padding: 0 0.1875em;
   margin: 0;
   margin-left: -0.1875em;
+}
+// buttons /////////////////////////
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  @include borderradius();
+  background: $off-white;
+  border: 1px solid $white;
+  padding: 5px 11px;
+  background: $off-white;
+  @extend .tmp-shadow;
+  &:hover, &:focus {
+    background: $lighter-gray;
+  }
 }
 // Error conditions ////////////////////////////
 .error
@@ -168,31 +174,19 @@ input[type="time"]:focus,
 input[type="url"]:focus {
   box-shadow: 0 0 5px $light-gray;
   border-color: $light-gray;
-}
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="month"]:focus,
-input[type="week"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="time"]:focus,
-input[type="url"]:focus {
-  background: $off-white;
-  border-color: $light-gray;
   outline: none;
 }
-input[type="datetime"][disabled],
-input[type="datetime-local"][disabled],
-input[type="month"][disabled],
-input[type="week"][disabled],
-input[type="email"][disabled],
-input[type="number"][disabled],
-input[type="search"][disabled],
-input[type="tel"][disabled],
-input[type="time"][disabled],
-input[type="url"][disabled] {
-  background-color: $off-white;
+form input[disabled], form button[disabled] {
+  background-color: $light-gray;
+  box-shadow: none;
+  &:hover {
+    background-color: $light-gray;
+  }
 }
-
+// simple transitions ////////////////////
+form button, form input {
+  transition: all 0.3s ease;
+  &[disabled] {
+    transition: auto;
+  }
+}

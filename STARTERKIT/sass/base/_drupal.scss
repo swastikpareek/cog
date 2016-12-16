@@ -8,6 +8,15 @@ body {
   .inline {
     display: inline-block;
   }
+  ul.links.inline {
+    padding: 0;
+    margin: 0;
+    li {
+      @extend .no-ul-list;
+      padding: 0 9px 3px 0;
+      display: inline-block;
+    }
+  }
 }
 form .form-item {
   padding: 0px 0 7px;
@@ -21,7 +30,7 @@ form .description {
   margin-bottom: 3px;
 }
 .layout-node-form .layout-region-node-secondary > .form-wrapper {
-  @extend .blk-style;
+  @extend .blocked-style;
   h3, h4 {
     font-size: inherit;
   }
