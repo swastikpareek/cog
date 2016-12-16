@@ -21,7 +21,6 @@ input[type="text"],
 input[type="password"],
 input[type="date"],
 textarea {
-  border-radius: 0;
   background-color: white;
   font-family: inherit;
   border: 1px solid $lighter-gray;
@@ -147,7 +146,6 @@ input[type="search"],
 input[type="tel"],
 input[type="time"],
 input[type="url"] {
-  border-radius: 0;
   background-color: white;
   font-family: inherit;
   border: 1px solid $lighter-gray;
