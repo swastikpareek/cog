@@ -140,6 +140,7 @@ var options = {
     source: [
       paths.styles.source
     ],
+    builder: 'builder/twig',
     destination: 'styleguide/',
     css: [
       path.relative(paths.styleGuide, paths.styles.destination + 'styles.css'),
