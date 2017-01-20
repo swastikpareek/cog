@@ -6,6 +6,7 @@ hidden: true
 base theme: cog
 libraries:
   - STARTERKIT/fonts
+  - STARTERKIT/fontawesome
   - STARTERKIT/global
 regions:
   branding: Branding
