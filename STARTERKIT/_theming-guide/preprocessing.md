@@ -254,7 +254,6 @@ Many used and unused variables exist out of the box for most of the core Twig fi
 <br><hr>
 
 ### Additional References
-
 - <a href="https://www.drupal.org/docs/8/theming/twig/twig-best-practices-preprocess-functions-and-templates">Drupal.org Twig best practices - preprocess functions and templates</a>
 - <a href="https://www.drupal.org/docs/8/theming">Theming Drupal 8</a>
 - <a href="https://api.drupal.org/api/drupal/core!lib!Drupal!Core!Render!theme.api.php/function/hook_preprocess_HOOK/8.2.x">Drupal.org docs for hook\_preprocess\_HOOK</a>
