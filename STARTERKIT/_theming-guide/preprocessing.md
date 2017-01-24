@@ -1,4 +1,4 @@
-## Drupal Preprocessing
+## Theming Guide: Preprocessing in Drupal
 This document is a reference for techniques to create new customize variable in Drupal's preprocessing functions.
 
 ###Table of Contents
