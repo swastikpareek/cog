@@ -81,8 +81,6 @@ As with previous versions of Drupal, we always wrap our code with drupal.behavio
 
 
 
-
-
 <br><hr>
 
 ### Additional References
@@ -92,8 +90,4 @@ As with previous versions of Drupal, we always wrap our code with drupal.behavio
 - <a href="https://www.drupal.org/docs/8/theming">Theming Drupal 8</a>
 - <a href="https://www.drupal.org/docs/8/api/javascript-api/javascript-api-overview">Drupal.org JavaScript API overview</a>
 - <a href="https://www.drupal.org/node/172169">Drupal.org JavaScript coding standards</a>
-
-
-
-
 

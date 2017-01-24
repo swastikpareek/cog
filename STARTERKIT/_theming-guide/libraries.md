@@ -149,7 +149,5 @@ libraries-override:
 <br><hr>
 
 ### Additional References
-
-<a href="https://www.drupal.org/docs/8/theming-drupal-8/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-theme">Adding stylesheets (CSS) and JavaScript (JS) to a Drupal 8 theme</a>
-
-<a href="https://www.drupal.org/docs/8/theming">Theming Drupal 8</a>
+- <a href="https://www.drupal.org/docs/8/theming-drupal-8/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-theme">Adding stylesheets (CSS) and JavaScript (JS) to a Drupal 8 theme</a>
+- <a href="https://www.drupal.org/node/2349827">Defining a theme with an .info.yml file</a>

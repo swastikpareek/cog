@@ -195,10 +195,12 @@ After you run the new image task with `gulp imagemin`, the images in `src/` will
 
 
 
+<!-- -------------------------- -->
 
 <br><hr>
 
 ### Additional References
-
-<a href="https://www.drupal.org/docs/8/api/render-api/render-arrays">Render Arrays in Drupal 8</a>
+- <a href="https://www.drupal.org/docs/8/api/render-api/render-arrays">Render Arrays in Drupal 8</a>
+-  <a href="http://gulpjs.com/">GulpJS homepage</a>
+-  <a href="https://www.npmjs.com/package/gulp-imagemin">Image Min Gulp library</a>
 
