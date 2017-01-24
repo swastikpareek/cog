@@ -1,16 +1,16 @@
-## Theming Guide: JavaScript
+## Theming Guide: JavaScript in Drupal 
 
 
 ###Table of Contents
-- <a href="#jsfile">Adding a Javascript file to you theme</a>
+- <a href="#jsfile">Adding a Javascript file in Drupal</a>
 - <a href="#wrappingfile">Wrapping your JavaScript code in closure</a>
 - <a href="#behaviors">Adding JS code within Drupal.behaviors</a>
 
 <hr>
 
 <a name="jsfile"></a>
-### Adding a Javascript file to you theme 
-JavaScript file are now added thru your library definitions in Drupal 8. These files are now named as `*.libraries.yml` and can be updated incrementally after being defined. In this example we are the drupal and jQuery libraries as a dependency. 
+### Adding a Javascript file in Drupal 
+JavaScript files are now added in your library definitions in Drupal 8. These files are now named as `*.libraries.yml` and can be updated incrementally after being defined. In this example we are including two libraries as a dependency. 
 
 #### Filename
 `example.libraries.yml`
@@ -30,7 +30,7 @@ lib:
 
 <a name="wrappingfile"></a>
 ### Wrapping your JavaScript code in closure 
-Drupal best practices dictate that you wrap JavaScript code with the proper function closure to proper limit the JavaScript scope. We also typically add in common parameters (jQuery, Drupal, etc) within this function to address mapping and conflicts. We also suggest using strict mode within this closure with `'use strict';`.
+Drupal best practices dictate that you wrap JavaScript code with the proper function closure, in order to properly limit the JavaScript scope. We also typically add in common parameters (jQuery, Drupal, etc) within this function to address mapping and conflicts. We also suggest using strict mode within this closure with `'use strict';`.
 
 #### Filename
 `example.js`
@@ -53,7 +53,7 @@ Drupal best practices dictate that you wrap JavaScript code with the proper func
 
 <a name="behaviors"></a>
 ### Adding JS code within Drupal.behaviors
-As with previous versions of Drupal, we always wrap our code with drupal.behaviors instead of `$(document).ready` for multiple reasons. In the example below, we are wanting our code to fire only on document load, but you can use the same logic for all load events and target specific DOM declarations.
+As with previous versions of Drupal, we always wrap our code with drupal.behaviors instead of `$(document).ready`. In the example below, we are wanting our code to fire only on document load, but you can use the same logic for all load events and target specific DOM declarations.
 
 #### Filename
 `example.js`

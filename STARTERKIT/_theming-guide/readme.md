@@ -17,8 +17,20 @@ This theming guide is a reference of various techniques and snippets which are t
 <!-- -------------------------- -->
 
 ### Using Web Fonts in Drupal
-- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/fonts.md#cdnfonts">Adding external Web Fonts to your theme</a>
-- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/fonts.md#localfonts">Adding local Web Fonts to your theme</a>
+- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/fonts.md#cdnfonts">Adding External Web Fonts in Drupal</a>
+- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/fonts.md#localfonts">Adding External Web Fonts in Drupal</a>
+
+
+<!-- -------------------------- -->
+<!-- -------------------------- -->
+
+### Twig for Drupal 8
+- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/twig.md#twigbasics">Twig Basics</a>
+- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/twig.md#twigcompare">Twig Comparison and Control Operators</a>
+- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/twig.md#twigfunc">Twig Functions and Filters</a>
+- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/twig.md#twigenabledebug">Enable Twig Debugging</a>
+- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/twig.md#twigdebug">Debugging Options in Twig</a>
+
 
 <!-- -------------------------- -->
 <!-- -------------------------- -->
@@ -30,13 +42,6 @@ This theming guide is a reference of various techniques and snippets which are t
 - <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/images.md#imgfiduri">Return Image Information from File ID</a>
 - <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/images.md#gulpcompr">Compressing Images with Gulp</a>
 
-<!-- -------------------------- -->
-<!-- -------------------------- -->
-
-### JavaScript in Drupal 
-- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/javascript.md#jsfile">Adding a Javascript file to you theme</a>
-- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/javascript.md#wrappingfile">Wrapping your JavaScript code in closure</a>
-- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/javascript.md#behaviors">Adding JS code within Drupal.behaviors</a>
 
 <!-- -------------------------- -->
 <!-- -------------------------- -->
@@ -53,24 +58,23 @@ This theming guide is a reference of various techniques and snippets which are t
 <!-- -------------------------- -->
 
 ### Preprocessing in Drupal
-- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/preprocessing.md#customvars">Creating and passing custom variables to twig</a>
-- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/preprocessing.md#userrole">Creating body classes based on user role</a>
-- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/preprocessing.md#regionvar">Counting and creating classes elements per region</a>
-- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/preprocessing.md#homepage">Creating a body class for the homepage</a>
-- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/preprocessing.md#themespec">Creating a theme-specific variable to pass to twig</a>
-- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/preprocessing.md#pathalias">Creating body classes based on path alias</a>
-- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/preprocessing.md#nodetype">Creating body classes based on node type</a>
-- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/preprocessing.md#commonvars">Common variables available in primary twig files</a>
+- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/preprocessing.md#customvars">Creating and Passing Custom Variables to Twig</a>
+- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/preprocessing.md#userrole">Creating Body Classes based on User Role</a>
+- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/preprocessing.md#regionvar">Counting and Creating Classes per Region</a>
+- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/preprocessing.md#homepage">Creating a Body Class for the Homepage</a>
+- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/preprocessing.md#themespec">Creating a Theme-Specific Variable for Twig</a>
+- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/preprocessing.md#pathalias">Creating Body Classes based on Path Alias</a>
+- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/preprocessing.md#nodetype">Creating Body Classes based on Node Type</a>
+- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/preprocessing.md#commonvars">Common Variables in Twig files</a>
+
 
 <!-- -------------------------- -->
 <!-- -------------------------- -->
 
-### Twig for Drupal 8
-- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/twig.md#twigbasics">Twig Basics</a>
-- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/twig.md#twigcompare">Twig Comparison and Control Operators</a>
-- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/twig.md#twigfunc">Twig Functions and Filters</a>
-- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/twig.md#twigenabledebug">Enable Twig Debugging</a>
-- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/twig.md#twigdebug">Debugging Options in Twig</a>
+### JavaScript in Drupal 
+- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/javascript.md#jsfile">Adding a Javascript file in Drupal</a>
+- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/javascript.md#wrappingfile">Wrapping your JavaScript code in closure</a>
+- <a href="https://github.com/acquia-pso/cog/blob/8.x-1.x/STARTERKIT/_theming-guide/javascript.md#behaviors">Adding JS code within Drupal.behaviors</a>
 
 
 

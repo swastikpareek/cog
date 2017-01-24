@@ -1,5 +1,4 @@
-## Theming Guide: Sass & CSS
-Subject intro text 
+## Theming Guide: Sass in Drupal
 
 ###Table of Contents
 - <a href="#sassorg">Sass Style Organization</a>
@@ -180,8 +179,8 @@ There are two ways to really build a responsive site. Which way you go, usually 
 <br><hr>
 
 ### Additional References
+- [SMACSS Homepage](http://smacss.com/)
 - [SMACSS in themes](http://www.acquia.com/blog/organize-your-styles-introduction-smacss)
-- [SMACSS](http://smacss.com/)
 - [Chrome - Optimize Browser Rendering](https://developers.google.com/speed/docs/best-practices/rendering)
 - [Mozilla - Writing Efficient CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS)
 - [CSS Architecture for Drupal 8](https://www.drupal.org/coding-standards/css/architecture)

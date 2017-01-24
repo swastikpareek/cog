@@ -1,5 +1,4 @@
-## Theming Guide: Libraries
-One of those major improvements is to the library management system, which controls the attaching of CSS and JavaScript files.
+## Theming Guide: Drupal 8 Libraries
 
 ###Table of Contents
 - <a href="#locallibs">Defining Local Libraries in Drupal 8</a>
@@ -8,7 +7,6 @@ One of those major improvements is to the library management system, which contr
 - <a href="#attachtwig">Attaching Libraries within Twig files</a>
 - <a href="#preprocesslibraries">Attaching Libraries within Preprocess Functions</a>
 - <a href="#replaceremovelibs">Replacing or Removing Libraries</a>
-
 
 
 <!-- -------------------------- -->
