@@ -1,5 +1,4 @@
-## Theming Guide: Images
-This document provides examples of many common tasks when dealing with images in Drupal 8.
+## Theming Guide: Images in Drupal
 
 ###Table of Contents
 - <a href="#origrenderarray">Create Render Array for Original Image</a>
