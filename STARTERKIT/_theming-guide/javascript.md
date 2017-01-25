@@ -37,7 +37,7 @@ Drupal best practices dictate that you wrap JavaScript code with the proper func
 
 #### File contents
 ```
-(function ($, Drupal, window, document) {
+(function ($, Drupal, window, document, undefined) {
   'use strict';
 
   // Example of Drupal behavior.
@@ -46,7 +46,7 @@ Drupal best practices dictate that you wrap JavaScript code with the proper func
   // Example of Drupal behavior.
   Drupal.behaviors.exampleB = {....};
 
-})(jQuery, Drupal, this);
+})(jQuery, Drupal, this, this.document);
 ```
 
 <!-- -------------------------- -->
@@ -60,7 +60,7 @@ As with previous versions of Drupal, we always wrap our code with drupal.behavio
 
 #### File contents
 ```
-(function ($, Drupal, window, document) {
+(function ($, Drupal, window, document, undefined) {
   'use strict';
 
   // Example of Drupal behavior loaded.
@@ -74,7 +74,7 @@ As with previous versions of Drupal, we always wrap our code with drupal.behavio
     }
   };
 
-})(jQuery, Drupal, this);
+})(jQuery, Drupal, this, this.document);
 ```
 
 <!-- -------------------------- -->
