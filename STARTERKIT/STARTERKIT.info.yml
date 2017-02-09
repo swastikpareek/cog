@@ -7,7 +7,7 @@ base theme: cog
 libraries:
   - STARTERKIT/fonts
   - STARTERKIT/fontawesome
-  - STARTERKIT/global
+  - STARTERKIT/global_styles
 regions:
   branding: Branding
   header: Header
