@@ -69,8 +69,6 @@ body {
 }
 
 @mixin borderradius($px: 5px) {
-  -moz-border-radius: $px;
-  -webkit-border-radius: $px;
   border-radius: $px;
   // background-clip: padding-box;
 }
@@ -88,14 +86,10 @@ body {
 }
 
 .tmp-shadow {
-  -webkit-box-shadow: 0 0 2px 0 rgba($med-gray, 1);
-  -moz-box-shadow: 0 0 2px 0 rgba($med-gray, 1);
   box-shadow: 0 0 2px 0 rgba($med-gray, 1);
 }
 
 .tmp-shadow-none {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none;
 }
 
