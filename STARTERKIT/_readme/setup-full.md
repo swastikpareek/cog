@@ -62,7 +62,7 @@ npm run build
 Gulp is already included once `npm run install-tools` has been run, but unless it is installed globally you will need to use the npm scripts such as `npm run build` to call it. You can also install a global version of gulp to run gulp tasks directly:
 
 ```bash
-npm install -g gulp
+npm install -g gulp-cli
 ```
 
 After gulp is installed globally it can be called like `gulp`, `gulp build` or `gulp watch`. The gulpfile documents available tasks outside of the default `gulp` task, which runs a production ready theme build. You can use `gulp --tasks` to get a list of these tasks as well. You can also use `npm run` to see which npm scripts are available and what commands they call.
