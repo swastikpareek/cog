@@ -72,7 +72,7 @@ var plugins = require('gulp-load-plugins')({
     'gulp-sass-glob': 'sassGlob',
     'run-sequence': 'runSequence',
     'gulp-clean-css': 'cleanCSS',
-    'gulp-stylelint': 'stylelint'
+    'gulp-stylelint': 'gulpStylelint'
   }
 });
 
