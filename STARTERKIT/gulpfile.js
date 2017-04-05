@@ -63,6 +63,8 @@
 // typey                 : A complete framework for working with typography in sass
 // -------------------------------------
 
+/* global require */
+
 var gulp = require('gulp');
 // Setting pattern this way allows non gulp- plugins to be loaded as well.
 var plugins = require('gulp-load-plugins')({
