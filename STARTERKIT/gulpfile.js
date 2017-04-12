@@ -6,6 +6,7 @@
 //
 // Available tasks:
 //   `gulp`
+//   'gulp browser-sync'
 //   `gulp build`
 //   `gulp build:dev`
 //   `gulp clean`
@@ -95,6 +96,19 @@ var paths = {
 // These are passed to each task.
 var options = {
 
+  // ----- Browsersync ----- //
+
+  browserSync: {
+    // Put your local site URL here to prevent Browsersync
+    // from prompting you to add additional scripts to your page.
+    // proxy: {
+    //   target: 'http://local.example.com'
+    // },
+    open: 'external',
+    xip: true,
+    logConnections: true
+  },
+
   // ----- CSS ----- //
 
   css: {
@@ -158,6 +172,7 @@ var options = {
 };
 
 // Tasks
+require('./gulp-tasks/browser-sync')(gulp, plugins, options);
 require('./gulp-tasks/build')(gulp, plugins, options);
 require('./gulp-tasks/clean')(gulp, plugins, options);
 require('./gulp-tasks/clean-css')(gulp, plugins, options);
@@ -168,6 +183,7 @@ require('./gulp-tasks/default')(gulp, plugins, options);
 require('./gulp-tasks/lint-js')(gulp, plugins, options);
 require('./gulp-tasks/lint-css')(gulp, plugins, options);
 require('./gulp-tasks/minify-css')(gulp, plugins, options);
+require('./gulp-tasks/serve')(gulp, plugins, options);
 require('./gulp-tasks/test-css')(gulp, plugins, options);
 require('./gulp-tasks/watch')(gulp, plugins, options);
 
