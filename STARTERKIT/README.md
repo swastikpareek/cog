@@ -38,8 +38,7 @@ Once you have created a custom sub-theme, you will setup for local compiling. If
 * Install Node.js with `./install-node.sh 4.4.4` and then point to the proper version with `source ~/.bashrc && nvm use --delete-prefix 4.4.4` 
   * (optional) If you are not using avn then run `nvm use 4.4.4` when closing and reopening your session
   * (optional) If you choose to use avn follow the instructions [here](_readme/setup-full.md#avn)
-* Install the [Yarn](https://yarnpkg.com/en/docs/install) package manager globally `npm install -g yarn` 
-* Run the command `yarn install` within your `themes/custom/mytheme` folder
+* Run the command `npm install` within your `themes/custom/mytheme` folder
 * Install the [Gulp](http://gulpjs.com/) build tool globally using `npm install -g gulp-cli`.
 * To confirm Gulp and other items are instantiated `npm run build`
 * You can now compile both your Sass and JS with `gulp watch`
