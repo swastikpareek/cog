@@ -76,7 +76,8 @@ var plugins = require('gulp-load-plugins')({
     'run-sequence': 'runSequence',
     'gulp-clean-css': 'cleanCSS',
     'gulp-stylelint': 'stylelint',
-    'gulp-babel': 'babel'
+    'gulp-babel': 'babel',
+    'gulp-util': 'gutil'
   }
 });
 
@@ -170,7 +171,7 @@ var options = {
     js: [],
     homepage: 'style-guide-only/homepage.md',
     title: 'Living Style Guide'
-  }
+  },
 
   // ------ pa11y ----- //
   pa11y: {

@@ -27,44 +27,26 @@ module.exports = function (gulp, plugins, options) {
           for (var key in results) {
             if (Object.prototype.hasOwnProperty.call(results, key)) {
               var result = results[key];
+              var message = '\n================================================================================\n' +
+              url + '\n' +
+              result.type + '\n' +
+              result.code + '\n'
+              + result.context
+              + '\n' + result.message
+              + '\n' + result.selector +
+              '\n================================================================================\n';
+
               if (result.type === 'error') {
                 errors++;
-                gutil.log(gutil.colors.red(
-                  '\n================================================================================\n' +
-                  url + '\n' +
-                  result.type + '\n' +
-                  result.code + '\n'
-                  + result.context
-                  + '\n' + result.message
-                  + '\n' + result.selector +
-                  '\n================================================================================\n'
-                ));
+                gutil.log(gutil.colors.red(message));
               }
               else if (result.type === 'warning') {
                 warnings++;
-                gutil.log(gutil.colors.magenta(
-                  '\n================================================================================\n' +
-                  url + '\n' +
-                  result.type + '\n' +
-                  result.code + '\n'
-                  + result.context
-                  + '\n' + result.message
-                  + '\n' + result.selector +
-                  '\n================================================================================\n'
-                ));
+                gutil.log(gutil.colors.magenta(message));
               }
               else if (result.type === 'notice') {
                 notices++;
-                gutil.log(gutil.colors.cyan(
-                  '\n================================================================================\n' +
-                  url + '\n' +
-                  result.type + '\n' +
-                  result.code + '\n'
-                  + result.context
-                  + '\n' + result.message
-                  + '\n' + result.selector +
-                  '\n================================================================================\n'
-                ));
+                gutil.log(gutil.colors.cyan(message));
               }
             }
           }
