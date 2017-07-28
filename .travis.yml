@@ -73,8 +73,9 @@ install:
   # Set up front-end dependencies.
   - cd $COGNIZANT_DIR
 
-  - ./install-node.sh 6.10.0
-  - nvm use 6.10.0
+  - nvm ls-remote
+  - nvm install 6.11.0
+  - nvm use 6.11.0
   - npm install -g npm@latest
   - npm run install-tools
 
