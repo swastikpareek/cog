@@ -76,6 +76,7 @@ install:
   - nvm ls-remote
   - nvm install 6.11.0
   - nvm use 6.11.0
+  - npm install -g gulp-cli
   - npm install -g npm@latest
   - npm run install-tools
 
