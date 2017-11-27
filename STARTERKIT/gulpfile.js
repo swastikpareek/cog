@@ -13,6 +13,7 @@
 //   `gulp clean:css`
 //   `gulp clean:styleguide`
 //   `gulp compile:sass`
+//   `gulp sprite:svg`
 //   `gulp compile:styleguide`
 //   `gulp lint:js`
 //   `gulp lint:css`
@@ -23,6 +24,7 @@
 //   `gulp watch:js`
 //   `gulp watch:sass`
 //   `gulp watch:styleguide`
+//   `gulp watch:svg`
 //
 // -------------------------------------
 
@@ -43,6 +45,7 @@
 // gulp-sass-lint    : Lint Sass
 // gulp-size         : Print file sizes
 // gulp-sourcemaps   : Generate sourcemaps
+// gulp-svg-sprite   : Generate SVG sprites from a folder
 // gulp-uglify       : Minify JavaScript with UglifyJS
 // gulp-util         : Utility functions
 // gulp-watch        : Watch stream
@@ -76,6 +79,7 @@ var plugins = require('gulp-load-plugins')({
     'run-sequence': 'runSequence',
     'gulp-clean-css': 'cleanCSS',
     'gulp-stylelint': 'stylelint',
+    'gulp-svg-sprite': 'svgSprite',
     'gulp-eslint': 'gulpEslint',
     'gulp-babel': 'babel',
     'gulp-util': 'gutil'
@@ -95,7 +99,7 @@ var paths = {
     source: 'js/src',
     destination: 'js/dist'
   },
-  images: 'img/',
+  images: 'images/',
   styleGuide: 'styleguide'
 };
 
@@ -158,6 +162,32 @@ var options = {
 
   },
 
+  // ----- SVG ----- //
+  svg: {
+    files: path.join(paths.images, 'svgs-to-sprite/*.svg'),
+    destination: paths.styles.destination,
+    config: {
+      mode: {
+        symbol: {
+          bust: false,
+          dest: '',
+          inline: true,
+          // dimensions: false,
+          example: {
+            template: path.join(paths.styles.source, 'components/svg-sprite/sprite-template.html'),
+            dest: path.join('../', paths.styles.source, 'components/svg-sprite/svg-sprite.twig'),
+          },
+          render: {
+            css: true,
+          },
+        },
+      },
+      svg: {
+        namespaceIDs: true,
+      },
+    },
+  },
+
   // ----- KSS Node ----- //
   styleGuide: {
     source: [
@@ -215,6 +245,7 @@ require('./gulp-tasks/clean-styleguide')(gulp, plugins, options);
 require('./gulp-tasks/compile-sass')(gulp, plugins, options);
 require('./gulp-tasks/compile-js')(gulp, plugins, options);
 require('./gulp-tasks/compile-styleguide')(gulp, plugins, options);
+require('./gulp-tasks/svg-sprite')(gulp, plugins, options);
 require('./gulp-tasks/default')(gulp, plugins, options);
 require('./gulp-tasks/lint-js')(gulp, plugins, options);
 require('./gulp-tasks/lint-css')(gulp, plugins, options);

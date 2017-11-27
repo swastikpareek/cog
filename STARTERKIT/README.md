@@ -51,6 +51,7 @@ Cog is a developer-focused base theme and starterkit created by Acquia's Profess
 * Base preprocess functions for class definitions
 * Modular gulp tasks for compiling and linting
 * Living style guide construction via KSS-node
+* Integrated svg-sprites architecture for better frontend performance
 
 Cog is created with the intent of being used as a traditional base theme. By following the steps listed next, you will be cloning the starter sub-theme located in `cog/STARTERKIT`. This allows for proper delineation of the original Cog code from the flexible aspects of your custom theme.  
 
@@ -69,6 +70,7 @@ custom/ (theme folder)
 |-- css/  (generated css) 
 |-- gulp-tasks/ (modular gulp task files)
 |-- images/  (theme images)
+|---- svgs-to-sprite/  (theme svgs - to be converted in sprite)
 |-- js/  (compiled js)
 |-- sass/  (SMACSS based sass setup)
 |-- gulpfile.js  (configured gulp file) 

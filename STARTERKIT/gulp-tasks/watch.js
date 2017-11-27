@@ -34,6 +34,12 @@ module.exports = function (gulp, plugins, options) {
     });
   });
 
+  gulp.task('watch:svg', () => {
+    gulp.watch([
+      options.svg.files,
+    ], ['sprite:svg']);
+  });
+  
   gulp.task('watch:styleguide', function () {
     return gulp.watch([
       options.sass.files
