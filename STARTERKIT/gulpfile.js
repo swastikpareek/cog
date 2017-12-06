@@ -19,6 +19,7 @@
 //   `gulp minify:css`
 //   `gulp serve`
 //   `gulp test:css`
+//   `gulp test:pa11y`
 //   `gulp watch`
 //   `gulp watch:js`
 //   `gulp watch:sass`
@@ -184,6 +185,8 @@ var options = {
     failOnError: true, // fail the build on error
     showFailedOnly: true, // show errors only and override reporter
     reporter: 'console',
+    includeWarnings: true, // including warnings by default. - set it to false to disable
+    includeNotices: true, // including notices by default. - set it to false to disable
     log: {
       debug: console.log.bind(console),
       error: console.error.bind(console),
@@ -198,9 +201,9 @@ var options = {
       }
     },
     threshold: { // Set to -1 for no threshold.
-      errors: 10,
+      errors: 1,
       warnings: 10,
-      notices: 20
+      notices: -1
     }
   }
 
