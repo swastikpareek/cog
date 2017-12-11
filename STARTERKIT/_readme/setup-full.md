@@ -67,6 +67,10 @@ npm install -g gulp-cli
 
 After gulp is installed globally it can be called like `gulp`, `gulp build` or `gulp watch`. The gulpfile documents available tasks outside of the default `gulp` task, which runs a production ready theme build. You can use `gulp --tasks` to get a list of these tasks as well. You can also use `npm run` to see which npm scripts are available and what commands they call.
 
+### Setting up theme images compression
+
+The theme provide image compression task out of the box. This can be used for compressing all jpg images. This is a lossless compression and all the compressed files are saved in `compressed-images` folder. To use this functionality, in the themes folder in your terminal type - `gulp compress:image`.  This will create a new folder (if not already present) by name of `compressed-images/` and move all the compressed images present in `images` folder.
+
 ### Browsersync
 
 [Browsersync](https://www.browsersync.io/) is configured to allow for multi-device testing and to automatically refresh the page when changes are made to your theme's styles and javascript. You can start Browsersync with `npm run serve`, or `gulp serve` if Gulp has been installed globally. The serve task will automatically start the watch task in the background, so there is no need to run them both.

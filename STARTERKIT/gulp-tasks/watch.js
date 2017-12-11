@@ -43,4 +43,14 @@ module.exports = function (gulp, plugins, options) {
       );
     });
   });
+
+  gulp.task('watch:image', function () {
+    return gulp.watch([
+      options.images.files
+    ], function () {
+      plugins.runSequence(
+        'compress:image'
+      );
+    });
+  });  
 };

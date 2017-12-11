@@ -14,6 +14,7 @@
 //   `gulp clean:styleguide`
 //   `gulp compile:sass`
 //   `gulp compile:styleguide`
+//   `gulp compress:image`
 //   `gulp lint:js`
 //   `gulp lint:css`
 //   `gulp minify:css`
@@ -40,6 +41,7 @@
 // gulp-plumber      : Prevent pipe breaking from errors
 // gulp-rename       : Rename files
 // gulp-sass         : Compile Sass
+// gulp-imagemin     : Image Compress
 // gulp-sass-glob    : Provide Sass Globbing
 // gulp-sass-lint    : Lint Sass
 // gulp-size         : Print file sizes
@@ -52,6 +54,8 @@
 // eslint            : JavaScript code quality tool
 // kss               : Living Style Guide Generator
 // run-sequence      : Run a series of dependent Gulp tasks in order
+// imagemin-jpegoptim: JPG image optimiser
+// imagemin-pngquant : PNG image optimiser
 // -------------------------------------
 
 // -------------------------------------
@@ -79,7 +83,10 @@ var plugins = require('gulp-load-plugins')({
     'gulp-stylelint': 'stylelint',
     'gulp-eslint': 'gulpEslint',
     'gulp-babel': 'babel',
-    'gulp-util': 'gutil'
+    'gulp-util': 'gutil',
+    'gulp-plumber': 'plumber',
+    'imagemin-pngquant': 'pngquant',
+    'imagemin-jpegoptim': 'jpegoptim',    
   }
 });
 
@@ -96,8 +103,9 @@ var paths = {
     source: 'js/src',
     destination: 'js/dist'
   },
-  images: 'img/',
-  styleGuide: 'styleguide'
+  images: 'images/',
+  styleGuide: 'styleguide',
+  compressedImages: 'compressed-images/'
 };
 
 // These are passed to each task.
@@ -141,7 +149,7 @@ var options = {
   // ----- Images ----- //
   images: {
     files: paths.images + '**/*.{png,gif,jpg,svg}',
-    destination: paths.images
+    destination: paths.compressedImages
   },
 
   // ----- eslint ----- //
@@ -218,6 +226,7 @@ require('./gulp-tasks/clean-styleguide')(gulp, plugins, options);
 require('./gulp-tasks/compile-sass')(gulp, plugins, options);
 require('./gulp-tasks/compile-js')(gulp, plugins, options);
 require('./gulp-tasks/compile-styleguide')(gulp, plugins, options);
+require('./gulp-tasks/compress-image')(gulp, plugins, options);
 require('./gulp-tasks/default')(gulp, plugins, options);
 require('./gulp-tasks/lint-js')(gulp, plugins, options);
 require('./gulp-tasks/lint-css')(gulp, plugins, options);
